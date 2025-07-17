@@ -3,12 +3,35 @@
 A data-driven sentiment analysis dashboard built using Python and Streamlit, designed to collect and visualize public opinion from platforms like Twitter (X) and Reddit.
 
 ---
+# Initial Dashboard Prototype
 
-## Project Overview
+## Overview
+This prototype is the first step in building a comprehensive Twitter Sentiment Dashboard using Streamlit. It focuses on setting up the foundational layout and UI of the dashboard before integrating data scraping or sentiment analysis functionalities.
 
-This application collects public posts using `snscrape` from Twitter (X), analyzes their sentiment using NLP techniques such as TextBlob or VADER, and displays the results in an interactive web dashboard using Streamlit. The goal is to help users understand public perception around a given keyword, event, or brand.
+## File Included
+- `01_Initial_Dashboard_Prototype.py`  
+  → A basic Streamlit app with a sidebar, placeholder tabs for future visualizations, and layout structure.
 
----
+## How to Run
+Make sure Streamlit is installed:
+
+```bash
+pip install streamlit
+```
+
+Then run the app:
+
+```bash
+streamlit run 01_Initial_Dashboard_Prototype.py
+```
+
+This will open a local dashboard in your browser.
+
+## Current Progress
+- Streamlit interface is successfully launched.
+- UI sections for visual analytics (Top Hashtags, Tweet Count, Polarity) are created as placeholders.
+- Sidebar navigation is ready.
+- Responsive layout is tested.
 
 ## Features
 
