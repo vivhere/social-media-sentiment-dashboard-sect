@@ -55,4 +55,5 @@ This will open a local dashboard in your browser.
 ---
 
 ## Folder Structure
+📄 [Click here to view the Dashboard Preview (PDF)](Social%20Media%20Sentiment%20Dashboard.pdf)
 
