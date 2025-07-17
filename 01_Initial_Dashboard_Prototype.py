@@ -1,67 +1,55 @@
-# Project: Social Media Sentiment Dashboard (Prototype)
-# Author: Vivek Yadav
-# Phase: UI and Sentiment Visualization
+# 01_Initial_Dashboard_Prototype
 
-# --------------------------
-# Step 1: Import Libraries
-# --------------------------
-import pandas as pd
-import streamlit as st
-import matplotlib.pyplot as plt
+## Project: Social Media Sentiment Dashboard (Prototype)
+**Author:** Vivek Yadav  
+**Phase:** UI and Sentiment Visualization (Static)
 
-# --------------------------
-# Step 2: Setup Streamlit Page
-# --------------------------
-st.set_page_config(page_title="Social Media Sentiment Dashboard", layout="wide")
-st.title("Social Media Sentiment Dashboard (Prototype)")
+## Overview
+This prototype is the first step in building a full-scale social media sentiment analysis dashboard. It demonstrates how sentiment data can be visually represented using Streamlit and Matplotlib with dummy data.
 
-st.markdown("""
-This prototype demonstrates how sentiment data can be displayed and summarized using basic dummy data.
-The live tweet scraping and NLP parts will be added in future phases.
-""")
+The current version is static and does **not** include live tweet scraping or NLP sentiment analysis yet. These will be added in future phases.
 
-# --------------------------
-# Step 3: Sample Dataset
-# --------------------------
-data = {
-    "Platform": ["Twitter", "Reddit", "Twitter", "Reddit", "Twitter"],
-    "Text": [
-        "This product is amazing!",
-        "Not satisfied with the quality.",
-        "Absolutely loved it.",
-        "Worst experience ever.",
-        "It's okay, nothing special."
-    ],
-    "Sentiment": ["Positive", "Negative", "Positive", "Negative", "Neutral"]
-}
+## Features Implemented
+- Streamlit-based interactive UI
+- Table display of sample sentiment-tagged posts
+- Bar chart summarizing sentiment distribution
+- Basic layout with headers, markdown, and visual plots
 
-df = pd.DataFrame(data)
+## Tech Stack
+- Python
+- Streamlit
+- Pandas
+- Matplotlib
 
-# --------------------------
-# Step 4: Show Data
-# --------------------------
-st.subheader("Sample Data")
-st.dataframe(df)
+## File
+- `01_Initial_Dashboard_Prototype.py`  
+  Streamlit app containing static layout and dummy sentiment visualization.
 
-# --------------------------
-# Step 5: Sentiment Summary
-# --------------------------
-st.subheader("Sentiment Distribution")
+## How to Run
 
-sentiment_counts = df['Sentiment'].value_counts()
-fig, ax = plt.subplots()
-sentiment_counts.plot(kind='bar', color=['green', 'red', 'gray'], ax=ax)
-plt.title("Count of Sentiment Types")
-plt.xlabel("Sentiment")
-plt.ylabel("Count")
-st.pyplot(fig)
+1. Install required libraries:
+```bash
+pip install streamlit pandas matplotlib
+```
 
-# --------------------------
-# Step 6: Conclusion
-# --------------------------
-st.markdown("""
-### Notes:
-- This is a static dashboard based on sample data.
-- Real-time scraping from Twitter will be integrated using `snscrape` in the next update.
-- NLP sentiment analysis using `TextBlob` or `VADER` will also be integrated in the next version.
-""")
+2. Launch the dashboard:
+```bash
+streamlit run 01_Initial_Dashboard_Prototype.py
+```
+
+3. Open the app in your browser (usually at `http://localhost:8501`).
+
+## Sample Output
+
+- Displays sample social media posts (Twitter and Reddit) with predefined sentiments.
+- Shows a bar chart visualizing the count of each sentiment type (Positive, Negative, Neutral).
+
+## Roadmap (Next Steps)
+- Integrate real-time tweet scraping using `snscrape`
+- Implement sentiment analysis using `TextBlob` or `VADER`
+- Add filtering by platform, keyword, and sentiment
+- Enhance visualizations using `plotly` or other libraries
+
+---
+
+> This version is primarily for UI and visualization validation before integrating dynamic components.
