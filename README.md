@@ -55,6 +55,5 @@ This will open a local dashboard in your browser.
 ---
 
 ## Folder Structure
-![Dashboard Screenshot](<img width="951" height="807" alt="image" src="https://github.com/user-attachments/assets/56753712-e737-425f-a517-06e98b4e9552" />
-)
+
 
